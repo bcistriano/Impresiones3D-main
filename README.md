@@ -1,17 +1,36 @@
 # Impresiones3D
 
-Es mi pagina web sobre impresiones 3D, funcionando Home.
-En el Home hay una seccion que tiene la opción de Crear un producto, con sus respectivas validaciones.
-Cada producto al ser creado tiene detalle de producto, con opciones de Editar y Eliminar (funcionan).
-El register y el login estan disponibles pero no funcionan.
-Existe una Base de datos en la carpeta sql.
-Por ultimo, no tuve tiempo para hacer capturas de pantalla.
+Somos una empresa con amplios conocimientos en el manejo de los más avanzados Softwares de diseño 3D e impresión. Contamos con productos originales y divertidos enfocados en brindar objetos que animen el ambiente y ofrezcan funcionalidades en el hogar.
 
 
-Instalar:  npm install
+### En nuestra tienda encontraras decoraciones, mates, macetas e inclusive categorias particulares de animaciones y sagas, como Harry Potter!
 
+## Vistas
 
-Uso:  npm start
+### Home
+![product](https://github.com/breenmica10/Impresiones3D-main/blob/main/public/img/home.jpeg)
 
+### Detalle del producto
+![detail](https://github.com/breenmica10/Impresiones3D-main/blob/main/public/img/detalleproducto.jpeg)
 
-Autores:  [Brenda Cistriano] https://github.com/breenmica10
+### Editar producto
+![edit](https://github.com/breenmica10/Impresiones3D-main/blob/main/public/img/modificarproducto.jpeg)
+
+### Crear producto
+![create](https://github.com/breenmica10/Impresiones3D-main/blob/main/public/img/modificarproducto.jpeg)
+
+## Instalar
+
+```bash
+npm install
+```
+
+## Uso
+
+```bash
+npm start
+```
+
+# Autores
+
+- [Brenda Cistriano] https://github.com/breenmica10
