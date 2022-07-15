@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+    
+    <!-- main section -->
+
+    <main>
+        <section class="products">
+          <h1>Nuestros Productos</h1>
+            <% for( let i = 0; i < productData.length ; i++ ) { %>
+            <article class="imagenes">
+              <a href="/products/database/<%= productData[i].id %> ">
+                <h3 class="name"><%= productData[i].name %></h3>
+                <img src="/img/products/<%= productData[i].image %> " class="imagen-index" alt="placeholder">
+                <div class="product-description">
+                    <h3 class="description"><%= productData[i].description %></h3>
+                  <div>
+                    <p class="price"> $<%= productData[i].price %> </p>
+                  </div>
+                </div>
+              </a>
+          
+            </article>
+            <% } %>
+          </div>
+        </section>
+      </main>
+    <!-- end of main -->
+<!-- Footer section -->
+
+<%- include("./partials/footer.ejs") %>
+
+<!-- end of footer section -->
+</body>
+
+</html>

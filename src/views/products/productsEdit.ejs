@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs") %>
+
+
+<body>
+  <%- include("../partials/header.ejs") %>
+  <main>
+    
+    <form class="product-edit" action="/products/database/edit/<%= products.id %>" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <% if(typeof errors != 'undefined'){ %>
+          <ul class="claseNueva">
+              <% for (let i = 0; i < errors.length; i++) { %>
+                  <li style="color:rgb(167, 36, 36); padding-left: 20px;" class="claseNueva">
+                      <%= errors[i].msg %>
+                  </li>
+              <% } %> 
+          </ul>
+      <% } %>
+      <label for="productName">Cambiar nombre: </label>
+      <input type="text" value="<%= products.name %>" id="productName" name="productName">
+      <br>
+      <br>
+      <label for="productDescription">Descripción: </label>
+      <br>
+      <textarea name="productDescription" id="productDescription" cols="50" rows="2"><%= products.description %> </textarea>
+      <br>
+      <br>
+      <label for="productImage">Cambiar imagen</label>
+      <input type="file" name="productImage" id="productImage" value="<%= products.image %>">
+      <br>
+      <br>
+      <label> Categoria: </label>
+      <br>
+      <br>
+      <div class="product-category">
+        <label for="productClass"><input type="radio" name="productClass" value="decoracion"> Decoración</label>
+        <label for="productClass"><input type="radio" name="productClass" value="mates"> Mates</label>
+        <label for="productClass"><input type="radio" name="productClass" value="animacion" > Animación</label>
+        <label for="productClass"><input type="radio" name="productClass" value="macetas" > Macetas</label>
+        <label for="productClass"><input type="radio" name="productClass" value="harry-potter" > Harry Potter</label>
+      </div>
+      <br>
+      <br>
+      <div class="price">
+        <label for="productPrice">Precio</label>
+        <input type="number" min="0.01" step="0.01" max="25000" name="productPrice" id="productPrice" value="<%= products.price %>">
+      </div>
+      <br>
+      <br>
+      <button class="btn" type="submit">Actualizar producto</button>
+    </form>
+    <form href="/products/database/delete/<%= products.id %>" method="post">
+      <br>
+      <button class="btn dlt" type="submit">Eliminar producto</button>
+    </fieldset>
+    </form>
+  
+  </main>
+  <footer>
+    <%- include("../partials/footer.ejs") %>
+  </footer>
+</body>
+
+</html>

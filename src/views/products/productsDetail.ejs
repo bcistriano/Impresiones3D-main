@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include("../partials/head.ejs") %>
+  
+
+<body>
+  <%- include("../partials/header.ejs") %>
+  <main>
+    <div>
+      <h3 class="product-name"><%= products.name %> </h3>
+      <div class="product-imag">
+        <img src="/img/products/<%= products.image %>">
+        <div class="product-detail">
+          <h3 class="products.description">Descripción: <%= products.description %> </h3>
+        </div>
+        <h4> Precio unitario: <%= products.price %> </h4>
+      </div>
+
+      <div class="edit_delete">
+        <a href="/products/database/edit/<%= products.id %>" type="button" class="btn"
+          style="margin-right:5px;height: 40px;">Editar producto</a>
+          <br>
+          <br>
+        <form action="/products/database/delete/<%= products.id %>" method="POST">
+          <button type="submit" class="btn" style="height: 40px;">Eliminar producto</button><br><br>
+        </form>
+      </div>
+
+  </main>
+
+  <footer>
+    <%- include("../partials/footer.ejs") %>
+  </footer>
+
+</body>
+
+</html>
