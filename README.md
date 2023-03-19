@@ -33,4 +33,4 @@ npm start
 
 # Autores
 
-- [Brenda Cistriano] https://github.com/breenmica10
+- [Brenda Cistriano] https://github.com/bcistriano
